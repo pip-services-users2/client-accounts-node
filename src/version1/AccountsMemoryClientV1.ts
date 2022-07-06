@@ -40,6 +40,12 @@ export class AccountsMemoryClientV1 implements IAccountsClientV1 {
         let fromCreateTime = filter.getAsNullableDateTime('from_create_time');
         let toCreateTime = filter.getAsNullableDateTime('to_create_time');
         let deleted = filter.getAsBooleanWithDefault('deleted', false);
+
+        let ids = filter.getAsObject('ids');
+        if (typeof (ids) === "string")
+            ids = ids.split(',');
+        if (!Array.isArray(ids))
+            ids = null;
         
         return (item: AccountV1) => {
             if (search != null && !this.matchSearch(item, search))
@@ -57,6 +63,8 @@ export class AccountsMemoryClientV1 implements IAccountsClientV1 {
             if (toCreateTime != null && item.create_time < toCreateTime)
                 return false;
             if (!deleted && item.deleted) 
+                return false;
+            if (ids != null && ids.indexOf(item.id) < 0)
                 return false;
             return true;
         };
