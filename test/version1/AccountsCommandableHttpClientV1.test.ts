@@ -6,7 +6,7 @@ import { ConsoleLogger } from 'pip-services3-components-nodex';
 import { AccountsMemoryPersistence } from 'service-accounts-node';
 import { AccountsController } from 'service-accounts-node';
 import { AccountsHttpServiceV1 } from 'service-accounts-node';
-import { AccountsHttpClientV1 } from '../../src/version1/AccountsHttpClientV1';
+import { AccountsCommandableHttpClientV1 } from '../../src/version1/AccountsCommandableHttpClientV1';
 import { AccountsClientFixtureV1 } from './AccountsClientFixtureV1';
 
 var httpConfig = ConfigParams.fromTuples(
@@ -17,7 +17,7 @@ var httpConfig = ConfigParams.fromTuples(
 
 suite('AccountsHttpClientV1', ()=> {
     let service: AccountsHttpServiceV1;
-    let client: AccountsHttpClientV1;
+    let client: AccountsCommandableHttpClientV1;
     let fixture: AccountsClientFixtureV1;
 
     suiteSetup(async () => {
@@ -37,7 +37,7 @@ suite('AccountsHttpClientV1', ()=> {
         controller.setReferences(references);
         service.setReferences(references);
 
-        client = new AccountsHttpClientV1();
+        client = new AccountsCommandableHttpClientV1();
         client.setReferences(references);
         client.configure(httpConfig);
 

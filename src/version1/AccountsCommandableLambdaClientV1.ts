@@ -7,7 +7,7 @@ import { CommandableLambdaClient } from 'pip-services3-aws-nodex';
 import { AccountV1 } from './AccountV1';
 import { IAccountsClientV1 } from './IAccountsClientV1';
 
-export class AccountsLambdaClientV1 extends CommandableLambdaClient implements IAccountsClientV1 {
+export class AccountsCommandableLambdaClientV1 extends CommandableLambdaClient implements IAccountsClientV1 {
 
     constructor(config?: any) {
         super('accounts');

@@ -7,7 +7,7 @@ import { CommandableHttpClient } from 'pip-services3-rpc-nodex';
 import { AccountV1 } from './AccountV1';
 import { IAccountsClientV1 } from './IAccountsClientV1';
 
-export class AccountsHttpClientV1 extends CommandableHttpClient implements IAccountsClientV1 {
+export class AccountsCommandableHttpClientV1 extends CommandableHttpClient implements IAccountsClientV1 {
 
     constructor(config?: any) {
         super('v1/accounts');

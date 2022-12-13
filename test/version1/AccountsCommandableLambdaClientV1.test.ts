@@ -3,7 +3,7 @@ let process = require('process');
 import { ConfigParams } from 'pip-services3-commons-nodex';
 
 import { AccountsClientFixtureV1 } from './AccountsClientFixtureV1';
-import { AccountsLambdaClientV1 } from '../../src/version1/AccountsLambdaClientV1';
+import { AccountsCommandableLambdaClientV1 } from '../../src/version1/AccountsCommandableLambdaClientV1';
 
 suite('AccountsLambdaClient', ()=> {
     let AWS_LAMDBA_ARN = process.env["AWS_LAMDBA_ARN"] || "";
@@ -26,11 +26,11 @@ suite('AccountsLambdaClient', ()=> {
     if (lambdaConfig.getAsNullableString("connection.protocol") != "aws")
         return;
 
-    let client: AccountsLambdaClientV1;
+    let client: AccountsCommandableLambdaClientV1;
     let fixture: AccountsClientFixtureV1;
 
     setup(async () => {
-        client = new AccountsLambdaClientV1();
+        client = new AccountsCommandableLambdaClientV1();
         client.configure(lambdaConfig);
 
         fixture = new AccountsClientFixtureV1(client);

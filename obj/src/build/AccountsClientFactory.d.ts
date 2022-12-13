@@ -5,7 +5,7 @@ export declare class AccountsClientFactory extends Factory {
     static NullClientV1Descriptor: Descriptor;
     static MemoryClientV1Descriptor: Descriptor;
     static DirectClientV1Descriptor: Descriptor;
-    static HttpClientV1Descriptor: Descriptor;
+    static CommandableHttpClientV1Descriptor: Descriptor;
     static CommandableGrpcClientV1Descriptor: Descriptor;
     constructor();
 }
