@@ -31,12 +31,11 @@ export class AccountsGrpcClientV1 extends GrpcClient implements IAccountsClientV
             if (response.error != null)
                 throw AccountsGrpcConverterV1.toError(response.error);
             
+            timing.endTiming();
             return response ? AccountsGrpcConverterV1.toAccountPage(response.getPage()) : null;
         } catch (err) {
             timing.endFailure(err);
             throw err;
-        } finally {
-            timing.endTiming();
         }
     }
 
@@ -53,13 +52,12 @@ export class AccountsGrpcClientV1 extends GrpcClient implements IAccountsClientV
             if (response.error != null)
                 throw AccountsGrpcConverterV1.toError(response.error);
 
+            timing.endTiming();
             return response ? AccountsGrpcConverterV1.toAccount(response.getAccount()) : null;
         } catch (err) {
             timing.endFailure(err);
             throw err;
-        } finally {
-            timing.endTiming();
-        }      
+        }  
     }
 
     public async getAccountByLogin(correlationId: string, login: string): Promise<AccountV1> {
@@ -75,13 +73,12 @@ export class AccountsGrpcClientV1 extends GrpcClient implements IAccountsClientV
             if (response.error != null)
                 throw AccountsGrpcConverterV1.toError(response.error);
 
+            timing.endTiming();
             return response ? AccountsGrpcConverterV1.toAccount(response.getAccount()) : null;
         } catch (err) {
             timing.endFailure(err);
             throw err;
-        } finally {
-            timing.endTiming();
-        }    
+        }  
     }
 
     public async getAccountByIdOrLogin(correlationId: string, idOrLogin: string): Promise<AccountV1> {
@@ -97,12 +94,11 @@ export class AccountsGrpcClientV1 extends GrpcClient implements IAccountsClientV
             if (response.error != null)
                 throw AccountsGrpcConverterV1.toError(response.error);
 
+            timing.endTiming();
             return response ? AccountsGrpcConverterV1.toAccount(response.getAccount()) : null;
         } catch (err) {
             timing.endFailure(err);
             throw err;
-        } finally {
-            timing.endTiming();
         }
     }
 
@@ -121,12 +117,11 @@ export class AccountsGrpcClientV1 extends GrpcClient implements IAccountsClientV
             if (response.error != null)
                 throw AccountsGrpcConverterV1.toError(response.error);
 
+            timing.endTiming();
             return response ? AccountsGrpcConverterV1.toAccount(response.getAccount()) : null;
         } catch (err) {
             timing.endFailure(err);
             throw err;
-        } finally {
-            timing.endTiming();
         }
     }
 
@@ -145,12 +140,11 @@ export class AccountsGrpcClientV1 extends GrpcClient implements IAccountsClientV
             if (response.error != null)
                 throw AccountsGrpcConverterV1.toError(response.error);
 
+            timing.endTiming();
             return response ? AccountsGrpcConverterV1.toAccount(response.getAccount()) : null;
         } catch (err) {
             timing.endFailure(err);
             throw err;
-        } finally {
-            timing.endTiming();
         }
     }
 
@@ -167,12 +161,11 @@ export class AccountsGrpcClientV1 extends GrpcClient implements IAccountsClientV
             if (response.error != null)
                 throw AccountsGrpcConverterV1.toError(response.error);
 
+            timing.endTiming();
             return response ? AccountsGrpcConverterV1.toAccount(response.getAccount()) : null;
         } catch (err) {
             timing.endFailure(err);
             throw err;
-        } finally {
-            timing.endTiming();
         }
     }
   

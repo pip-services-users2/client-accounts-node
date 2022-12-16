@@ -20,122 +20,52 @@ class AccountsCommandableGrpcClientV1 extends pip_services3_grpc_nodex_1.Command
     }
     getAccounts(correlationId, filter, paging) {
         return __awaiter(this, void 0, void 0, function* () {
-            let timing = this.instrument(correlationId, 'accounts.get_accounts');
-            try {
-                return yield this.callCommand('get_accounts', correlationId, {
-                    filter: filter,
-                    paging: paging
-                });
-            }
-            catch (err) {
-                timing.endFailure(err);
-                throw err;
-            }
-            finally {
-                timing.endTiming();
-            }
+            return yield this.callCommand('get_accounts', correlationId, {
+                filter: filter,
+                paging: paging
+            });
         });
     }
     getAccountById(correlationId, id) {
         return __awaiter(this, void 0, void 0, function* () {
-            let timing = this.instrument(correlationId, 'accounts.get_account_by_id');
-            try {
-                return yield this.callCommand('get_account_by_id', correlationId, {
-                    account_id: id
-                });
-            }
-            catch (err) {
-                timing.endFailure(err);
-                throw err;
-            }
-            finally {
-                timing.endTiming();
-            }
+            return yield this.callCommand('get_account_by_id', correlationId, {
+                account_id: id
+            });
         });
     }
     getAccountByLogin(correlationId, login) {
         return __awaiter(this, void 0, void 0, function* () {
-            let timing = this.instrument(correlationId, 'accounts.get_account_by_login');
-            try {
-                return yield this.callCommand('get_account_by_login', correlationId, {
-                    login: login
-                });
-            }
-            catch (err) {
-                timing.endFailure(err);
-                throw err;
-            }
-            finally {
-                timing.endTiming();
-            }
+            return yield this.callCommand('get_account_by_login', correlationId, {
+                login: login
+            });
         });
     }
     getAccountByIdOrLogin(correlationId, idOrLogin) {
         return __awaiter(this, void 0, void 0, function* () {
-            let timing = this.instrument(correlationId, 'accounts.get_account_by_id_or_login');
-            try {
-                return yield this.callCommand('get_account_by_id_or_login', correlationId, {
-                    id_or_login: idOrLogin
-                });
-            }
-            catch (err) {
-                timing.endFailure(err);
-                throw err;
-            }
-            finally {
-                timing.endTiming();
-            }
+            return yield this.callCommand('get_account_by_id_or_login', correlationId, {
+                id_or_login: idOrLogin
+            });
         });
     }
     createAccount(correlationId, account) {
         return __awaiter(this, void 0, void 0, function* () {
-            let timing = this.instrument(correlationId, 'accounts.create_account');
-            try {
-                return yield this.callCommand('create_account', correlationId, {
-                    account: account
-                });
-            }
-            catch (err) {
-                timing.endFailure(err);
-                throw err;
-            }
-            finally {
-                timing.endTiming();
-            }
+            return yield this.callCommand('create_account', correlationId, {
+                account: account
+            });
         });
     }
     updateAccount(correlationId, account) {
         return __awaiter(this, void 0, void 0, function* () {
-            let timing = this.instrument(correlationId, 'accounts.update_account');
-            try {
-                return yield this.callCommand('update_account', correlationId, {
-                    account: account
-                });
-            }
-            catch (err) {
-                timing.endFailure(err);
-                throw err;
-            }
-            finally {
-                timing.endTiming();
-            }
+            return yield this.callCommand('update_account', correlationId, {
+                account: account
+            });
         });
     }
     deleteAccountById(correlationId, id) {
         return __awaiter(this, void 0, void 0, function* () {
-            let timing = this.instrument(correlationId, 'accounts.delete_account_by_id');
-            try {
-                return yield this.callCommand('delete_account_by_id', correlationId, {
-                    account_id: id
-                });
-            }
-            catch (err) {
-                timing.endFailure(err);
-                throw err;
-            }
-            finally {
-                timing.endTiming();
-            }
+            return yield this.callCommand('delete_account_by_id', correlationId, {
+                account_id: id
+            });
         });
     }
 }

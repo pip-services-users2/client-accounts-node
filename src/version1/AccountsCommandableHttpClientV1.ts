@@ -17,135 +17,74 @@ export class AccountsCommandableHttpClientV1 extends CommandableHttpClient imple
     }
 
     public async getAccounts(correlationId: string, filter: FilterParams, paging: PagingParams): Promise<DataPage<AccountV1>> {
-        let timing = this.instrument(correlationId, 'accounts.get_accounts');
-        try {
-            return await this.callCommand(
-                'get_accounts',
-                correlationId,
-                {
-                    filter: filter,
-                    paging: paging
-                }
-            );
-        } catch (err) {
-            timing.endFailure(err);
-            throw err;
-        } finally {
-            timing.endTiming();
-        }
+        return await this.callCommand(
+            'get_accounts',
+            correlationId,
+            {
+                filter: filter,
+                paging: paging
+            }
+        );
     }
 
     public async getAccountById(correlationId: string, id: string): Promise<AccountV1> {
-        let timing = this.instrument(correlationId, 'accounts.get_account_by_id');
-        try {
-            return await this.callCommand(
-                'get_account_by_id',
-                correlationId,
-                {
-                    account_id: id
-                },
-            );
-        } catch (err) {
-            timing.endFailure(err);
-            throw err;
-        } finally {
-            timing.endTiming();
-        }
+        return await this.callCommand(
+            'get_account_by_id',
+            correlationId,
+            {
+                account_id: id
+            },
+        );
     }
 
     public async getAccountByLogin(correlationId: string, login: string): Promise<AccountV1> {
-        let timing = this.instrument(correlationId, 'accounts.get_account_by_login');
-
-        try {
-            return await this.callCommand(
-                'get_account_by_login',
-                correlationId,
-                {
-                    login: login
-                },
-            );
-        } catch (err) {
-            timing.endFailure(err);
-            throw err;
-        } finally {
-            timing.endTiming();
-        }
+        return await this.callCommand(
+            'get_account_by_login',
+            correlationId,
+            {
+                login: login
+            },
+        );
     }
 
     public async getAccountByIdOrLogin(correlationId: string, idOrLogin: string): Promise<AccountV1> {
-        let timing = this.instrument(correlationId, 'accounts.get_account_by_id_or_login');
-
-        try {
-            return await this.callCommand(
-                'get_account_by_id_or_login',
-                correlationId,
-                {
-                    id_or_login: idOrLogin
-                },
-            );
-        } catch (err) {
-            timing.endFailure(err);
-            throw err;
-        } finally {
-            timing.endTiming();
-        }
+        return await this.callCommand(
+            'get_account_by_id_or_login',
+            correlationId,
+            {
+                id_or_login: idOrLogin
+            },
+        );
     }
 
     public async createAccount(correlationId: string, account: AccountV1): Promise<AccountV1> {
-        let timing = this.instrument(correlationId, 'accounts.create_account');
-
-        try {
-            return await this.callCommand(
-                'create_account',
-                correlationId,
-                {
-                    account: account
-                }
-            );
-        } catch (err) {
-            timing.endFailure(err);
-            throw err;
-        } finally {
-            timing.endTiming();
-        }
+        return await this.callCommand(
+            'create_account',
+            correlationId,
+            {
+                account: account
+            }
+        );
     }
 
     public async updateAccount(correlationId: string, account: AccountV1): Promise<AccountV1> {
-        let timing = this.instrument(correlationId, 'accounts.update_account');
-
-        try {
-            return await this.callCommand(
-                'update_account',
-                correlationId,
-                {
-                    account: account
-                }
-            );
-        } catch (err) {
-            timing.endFailure(err);
-            throw err;
-        } finally {
-            timing.endTiming();
-        }
+        return await this.callCommand(
+            'update_account',
+            correlationId,
+            {
+                account: account
+            }
+        );
     }
 
     public async deleteAccountById(correlationId: string, id: string): Promise<AccountV1> {
-        let timing = this.instrument(correlationId, 'accounts.update_account');
-
-        try {
-            return await this.callCommand(
-                'delete_account_by_id',
-                correlationId,
-                {
-                    account_id: id
-                }
-            );
-        } catch (err) {
-            timing.endFailure(err);
-            throw err;
-        } finally {
-            timing.endTiming();
-        }
+        return await this.callCommand(
+            'delete_account_by_id',
+            correlationId,
+            {
+                account_id: id
+            }
+        );
     }
 
 }

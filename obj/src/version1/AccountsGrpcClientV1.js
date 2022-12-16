@@ -28,14 +28,12 @@ class AccountsGrpcClientV1 extends pip_services3_grpc_nodex_1.GrpcClient {
                 let response = yield this.call('get_accounts', correlationId, request);
                 if (response.error != null)
                     throw AccountsGrpcConverterV1_1.AccountsGrpcConverterV1.toError(response.error);
+                timing.endTiming();
                 return response ? AccountsGrpcConverterV1_1.AccountsGrpcConverterV1.toAccountPage(response.getPage()) : null;
             }
             catch (err) {
                 timing.endFailure(err);
                 throw err;
-            }
-            finally {
-                timing.endTiming();
             }
         });
     }
@@ -48,14 +46,12 @@ class AccountsGrpcClientV1 extends pip_services3_grpc_nodex_1.GrpcClient {
                 let response = yield this.call('get_account_by_id', correlationId, request);
                 if (response.error != null)
                     throw AccountsGrpcConverterV1_1.AccountsGrpcConverterV1.toError(response.error);
+                timing.endTiming();
                 return response ? AccountsGrpcConverterV1_1.AccountsGrpcConverterV1.toAccount(response.getAccount()) : null;
             }
             catch (err) {
                 timing.endFailure(err);
                 throw err;
-            }
-            finally {
-                timing.endTiming();
             }
         });
     }
@@ -68,14 +64,12 @@ class AccountsGrpcClientV1 extends pip_services3_grpc_nodex_1.GrpcClient {
                 let response = yield this.call('get_account_by_login', correlationId, request);
                 if (response.error != null)
                     throw AccountsGrpcConverterV1_1.AccountsGrpcConverterV1.toError(response.error);
+                timing.endTiming();
                 return response ? AccountsGrpcConverterV1_1.AccountsGrpcConverterV1.toAccount(response.getAccount()) : null;
             }
             catch (err) {
                 timing.endFailure(err);
                 throw err;
-            }
-            finally {
-                timing.endTiming();
             }
         });
     }
@@ -88,14 +82,12 @@ class AccountsGrpcClientV1 extends pip_services3_grpc_nodex_1.GrpcClient {
                 let response = yield this.call('get_account_by_id_or_login', correlationId, request);
                 if (response.error != null)
                     throw AccountsGrpcConverterV1_1.AccountsGrpcConverterV1.toError(response.error);
+                timing.endTiming();
                 return response ? AccountsGrpcConverterV1_1.AccountsGrpcConverterV1.toAccount(response.getAccount()) : null;
             }
             catch (err) {
                 timing.endFailure(err);
                 throw err;
-            }
-            finally {
-                timing.endTiming();
             }
         });
     }
@@ -109,14 +101,12 @@ class AccountsGrpcClientV1 extends pip_services3_grpc_nodex_1.GrpcClient {
                 let response = yield this.call('create_account', correlationId, request);
                 if (response.error != null)
                     throw AccountsGrpcConverterV1_1.AccountsGrpcConverterV1.toError(response.error);
+                timing.endTiming();
                 return response ? AccountsGrpcConverterV1_1.AccountsGrpcConverterV1.toAccount(response.getAccount()) : null;
             }
             catch (err) {
                 timing.endFailure(err);
                 throw err;
-            }
-            finally {
-                timing.endTiming();
             }
         });
     }
@@ -130,14 +120,12 @@ class AccountsGrpcClientV1 extends pip_services3_grpc_nodex_1.GrpcClient {
                 let response = yield this.call('update_account', correlationId, request);
                 if (response.error != null)
                     throw AccountsGrpcConverterV1_1.AccountsGrpcConverterV1.toError(response.error);
+                timing.endTiming();
                 return response ? AccountsGrpcConverterV1_1.AccountsGrpcConverterV1.toAccount(response.getAccount()) : null;
             }
             catch (err) {
                 timing.endFailure(err);
                 throw err;
-            }
-            finally {
-                timing.endTiming();
             }
         });
     }
@@ -150,14 +138,12 @@ class AccountsGrpcClientV1 extends pip_services3_grpc_nodex_1.GrpcClient {
                 let response = yield this.call('delete_account_by_id', correlationId, request);
                 if (response.error != null)
                     throw AccountsGrpcConverterV1_1.AccountsGrpcConverterV1.toError(response.error);
+                timing.endTiming();
                 return response ? AccountsGrpcConverterV1_1.AccountsGrpcConverterV1.toAccount(response.getAccount()) : null;
             }
             catch (err) {
                 timing.endFailure(err);
                 throw err;
-            }
-            finally {
-                timing.endTiming();
             }
         });
     }

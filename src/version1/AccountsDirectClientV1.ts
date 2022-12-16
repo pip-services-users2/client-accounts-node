@@ -24,12 +24,12 @@ export class AccountsDirectClientV1 extends DirectClient<any> implements IAccoun
         let timing = this.instrument(correlationId, 'accounts.get_accounts');
 
         try {
-            return await this._controller.getAccounts(correlationId, filter, paging);
+            let res = await this._controller.getAccounts(correlationId, filter, paging);
+            timing.endTiming();
+            return res;
         } catch (err) {
             timing.endFailure(err);
             throw err;
-        } finally {
-            timing.endTiming();
         }
     }
 
@@ -37,12 +37,12 @@ export class AccountsDirectClientV1 extends DirectClient<any> implements IAccoun
         let timing = this.instrument(correlationId, 'accounts.get_account_by_id');
 
         try {
-            return await this._controller.getAccountById(correlationId, id);
+            let res = await this._controller.getAccountById(correlationId, id);
+            timing.endTiming();
+            return res;
         } catch (err) {
             timing.endFailure(err);
             throw err;
-        } finally {
-            timing.endTiming();
         }
     }
 
@@ -50,12 +50,12 @@ export class AccountsDirectClientV1 extends DirectClient<any> implements IAccoun
         let timing = this.instrument(correlationId, 'accounts.get_account_by_login');
 
         try {
-            return await this._controller.getAccountByLogin(correlationId, login);
+            let res = await this._controller.getAccountByLogin(correlationId, login);
+            timing.endTiming();
+            return res;
         } catch (err) {
             timing.endFailure(err);
             throw err;
-        } finally {
-            timing.endTiming();
         }
     }
 
@@ -63,12 +63,12 @@ export class AccountsDirectClientV1 extends DirectClient<any> implements IAccoun
         let timing = this.instrument(correlationId, 'accounts.get_account_by_id_or_login');
 
         try {
-            return await this._controller.getAccountByIdOrLogin(correlationId, idOrLogin);
+            let res = await this._controller.getAccountByIdOrLogin(correlationId, idOrLogin);
+            timing.endTiming();
+            return res;
         } catch (err) {
             timing.endFailure(err);
             throw err;
-        } finally {
-            timing.endTiming();
         }
     }
 
@@ -76,12 +76,12 @@ export class AccountsDirectClientV1 extends DirectClient<any> implements IAccoun
         let timing = this.instrument(correlationId, 'accounts.create_account');
         
         try {
-            return await this._controller.createAccount(correlationId, account);
+            let res = await this._controller.createAccount(correlationId, account);
+            timing.endTiming();
+            return res;
         } catch (err) {
             timing.endFailure(err);
             throw err;
-        } finally {
-            timing.endTiming();
         }
     }
 
@@ -89,12 +89,12 @@ export class AccountsDirectClientV1 extends DirectClient<any> implements IAccoun
         let timing = this.instrument(correlationId, 'accounts.update_account');
 
         try {
-            return await this._controller.updateAccount(correlationId, account);
+            let res = await this._controller.updateAccount(correlationId, account);
+            timing.endTiming();
+            return res;
         } catch (err) {
             timing.endFailure(err);
             throw err;
-        } finally {
-            timing.endTiming();
         }
     }
 
@@ -102,12 +102,12 @@ export class AccountsDirectClientV1 extends DirectClient<any> implements IAccoun
         let timing = this.instrument(correlationId, 'accounts.delete_account_by_id');
 
         try {
-            return await this._controller.deleteAccountById(correlationId, id);
+            let res = await this._controller.deleteAccountById(correlationId, id);
+            timing.endTiming();
+            return res;
         } catch (err) {
             timing.endFailure(err);
             throw err;
-        } finally {
-            timing.endTiming();
         }
     }
 }

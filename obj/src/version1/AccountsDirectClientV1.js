@@ -24,14 +24,13 @@ class AccountsDirectClientV1 extends pip_services3_rpc_nodex_1.DirectClient {
         return __awaiter(this, void 0, void 0, function* () {
             let timing = this.instrument(correlationId, 'accounts.get_accounts');
             try {
-                return yield this._controller.getAccounts(correlationId, filter, paging);
+                let res = yield this._controller.getAccounts(correlationId, filter, paging);
+                timing.endTiming();
+                return res;
             }
             catch (err) {
                 timing.endFailure(err);
                 throw err;
-            }
-            finally {
-                timing.endTiming();
             }
         });
     }
@@ -39,14 +38,13 @@ class AccountsDirectClientV1 extends pip_services3_rpc_nodex_1.DirectClient {
         return __awaiter(this, void 0, void 0, function* () {
             let timing = this.instrument(correlationId, 'accounts.get_account_by_id');
             try {
-                return yield this._controller.getAccountById(correlationId, id);
+                let res = yield this._controller.getAccountById(correlationId, id);
+                timing.endTiming();
+                return res;
             }
             catch (err) {
                 timing.endFailure(err);
                 throw err;
-            }
-            finally {
-                timing.endTiming();
             }
         });
     }
@@ -54,14 +52,13 @@ class AccountsDirectClientV1 extends pip_services3_rpc_nodex_1.DirectClient {
         return __awaiter(this, void 0, void 0, function* () {
             let timing = this.instrument(correlationId, 'accounts.get_account_by_login');
             try {
-                return yield this._controller.getAccountByLogin(correlationId, login);
+                let res = yield this._controller.getAccountByLogin(correlationId, login);
+                timing.endTiming();
+                return res;
             }
             catch (err) {
                 timing.endFailure(err);
                 throw err;
-            }
-            finally {
-                timing.endTiming();
             }
         });
     }
@@ -69,14 +66,13 @@ class AccountsDirectClientV1 extends pip_services3_rpc_nodex_1.DirectClient {
         return __awaiter(this, void 0, void 0, function* () {
             let timing = this.instrument(correlationId, 'accounts.get_account_by_id_or_login');
             try {
-                return yield this._controller.getAccountByIdOrLogin(correlationId, idOrLogin);
+                let res = yield this._controller.getAccountByIdOrLogin(correlationId, idOrLogin);
+                timing.endTiming();
+                return res;
             }
             catch (err) {
                 timing.endFailure(err);
                 throw err;
-            }
-            finally {
-                timing.endTiming();
             }
         });
     }
@@ -84,14 +80,13 @@ class AccountsDirectClientV1 extends pip_services3_rpc_nodex_1.DirectClient {
         return __awaiter(this, void 0, void 0, function* () {
             let timing = this.instrument(correlationId, 'accounts.create_account');
             try {
-                return yield this._controller.createAccount(correlationId, account);
+                let res = yield this._controller.createAccount(correlationId, account);
+                timing.endTiming();
+                return res;
             }
             catch (err) {
                 timing.endFailure(err);
                 throw err;
-            }
-            finally {
-                timing.endTiming();
             }
         });
     }
@@ -99,14 +94,13 @@ class AccountsDirectClientV1 extends pip_services3_rpc_nodex_1.DirectClient {
         return __awaiter(this, void 0, void 0, function* () {
             let timing = this.instrument(correlationId, 'accounts.update_account');
             try {
-                return yield this._controller.updateAccount(correlationId, account);
+                let res = yield this._controller.updateAccount(correlationId, account);
+                timing.endTiming();
+                return res;
             }
             catch (err) {
                 timing.endFailure(err);
                 throw err;
-            }
-            finally {
-                timing.endTiming();
             }
         });
     }
@@ -114,14 +108,13 @@ class AccountsDirectClientV1 extends pip_services3_rpc_nodex_1.DirectClient {
         return __awaiter(this, void 0, void 0, function* () {
             let timing = this.instrument(correlationId, 'accounts.delete_account_by_id');
             try {
-                return yield this._controller.deleteAccountById(correlationId, id);
+                let res = yield this._controller.deleteAccountById(correlationId, id);
+                timing.endTiming();
+                return res;
             }
             catch (err) {
                 timing.endFailure(err);
                 throw err;
-            }
-            finally {
-                timing.endTiming();
             }
         });
     }
