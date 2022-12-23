@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.AccountsNullClientV1 = exports.AccountsMemoryClientV1 = exports.AccountsDirectClientV1 = exports.AccountsCommandableLambdaClientV1 = exports.AccountsCommandableHttpClientV1 = exports.AccountsCommandableGrpcClientV1 = exports.AccountActivityTypeV1 = exports.AccountV1 = void 0;
+exports.AccountsNullClientV1 = exports.AccountsMockClientV1 = exports.AccountsDirectClientV1 = exports.AccountsCommandableLambdaClientV1 = exports.AccountsCommandableHttpClientV1 = exports.AccountsCommandableGrpcClientV1 = exports.AccountActivityTypeV1 = exports.AccountV1 = void 0;
 var AccountV1_1 = require("./AccountV1");
 Object.defineProperty(exports, "AccountV1", { enumerable: true, get: function () { return AccountV1_1.AccountV1; } });
 var AccountActivityTypeV1_1 = require("./AccountActivityTypeV1");
@@ -13,8 +13,8 @@ var AccountsCommandableLambdaClientV1_1 = require("./AccountsCommandableLambdaCl
 Object.defineProperty(exports, "AccountsCommandableLambdaClientV1", { enumerable: true, get: function () { return AccountsCommandableLambdaClientV1_1.AccountsCommandableLambdaClientV1; } });
 var AccountsDirectClientV1_1 = require("./AccountsDirectClientV1");
 Object.defineProperty(exports, "AccountsDirectClientV1", { enumerable: true, get: function () { return AccountsDirectClientV1_1.AccountsDirectClientV1; } });
-var AccountsMemoryClientV1_1 = require("./AccountsMemoryClientV1");
-Object.defineProperty(exports, "AccountsMemoryClientV1", { enumerable: true, get: function () { return AccountsMemoryClientV1_1.AccountsMemoryClientV1; } });
+var AccountsMockClientV1_1 = require("./AccountsMockClientV1");
+Object.defineProperty(exports, "AccountsMockClientV1", { enumerable: true, get: function () { return AccountsMockClientV1_1.AccountsMockClientV1; } });
 var AccountsNullClientV1_1 = require("./AccountsNullClientV1");
 Object.defineProperty(exports, "AccountsNullClientV1", { enumerable: true, get: function () { return AccountsNullClientV1_1.AccountsNullClientV1; } });
 //# sourceMappingURL=index.js.map

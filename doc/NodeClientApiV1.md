@@ -18,7 +18,7 @@ and provides high-level API to access the microservice for simple and productive
 * [AccountsHttpClientV1 class](#client_http)
 * [AccountsSenecaClientV1 class](#client_seneca)
 * [AccountsDitectClientV1 class](#client_direct)
-* [AccountsMemoryClientV1 class](#client_memory)
+* [AccountsMockClientV1 class](#client_mock)
 * [AccountsNullClientV1 class](#client_null)
 
 ## <a name="install"></a> Installation
@@ -310,13 +310,13 @@ class AccountsDirectClientV1 extends DirectClient implements IAccountsClientV1 {
 }
 ```
 
-## <a name="client_memory"></a> AccountsMemoryClientV1 class
+## <a name="client_mock"></a> AccountsMockClientV1 class
 
-AccountsMemoryClientV1 is a dummy client that caches accounts locally in memory.
+AccountsMockClientV1 is a dummy client that caches accounts locally in memory.
 It is intended to be used as a mock in tests.
 
 ```javascript
-class AccountsMemoryClientV1 extends CommandableSenecaClient implements IAccountsClientV1 {
+class AccountsMockClientV1 extends CommandableSenecaClient implements IAccountsClientV1 {
     constructor(config?: any);
     getAccounts(correlationId, filter, paging, callback);
     getAccountById(correlationId, id, callback);

@@ -5,5 +5,5 @@ export { AccountsCommandableGrpcClientV1 } from './AccountsCommandableGrpcClient
 export { AccountsCommandableHttpClientV1 } from './AccountsCommandableHttpClientV1';
 export { AccountsCommandableLambdaClientV1 } from './AccountsCommandableLambdaClientV1';
 export { AccountsDirectClientV1 } from './AccountsDirectClientV1';
-export { AccountsMemoryClientV1 } from './AccountsMemoryClientV1';
+export { AccountsMockClientV1 } from './AccountsMockClientV1';
 export { AccountsNullClientV1 } from './AccountsNullClientV1';

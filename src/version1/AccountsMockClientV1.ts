@@ -7,7 +7,7 @@ import { BadRequestException } from 'pip-services3-commons-nodex';
 import { IAccountsClientV1 } from './IAccountsClientV1';
 import { AccountV1 } from './AccountV1';
 
-export class AccountsMemoryClientV1 implements IAccountsClientV1 {
+export class AccountsMockClientV1 implements IAccountsClientV1 {
     private _maxPageSize: number = 100;
     private _accounts: AccountV1[];
 
