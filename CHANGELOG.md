@@ -1,5 +1,10 @@
 <a name="1.0.0"></a>
 
+### 1.1.1 (2022-12-23)
+
+#### Breaking Changes
+* Updated components naming
+
 ### 1.0.0 (2022-04-05)
 
 #### Features
