@@ -12,7 +12,7 @@ export class AccountsClientFactory extends Factory {
 	public static NullClientV1Descriptor = new Descriptor('service-accounts', 'client', 'null', 'default', '1.0');
 	public static MockClientV1Descriptor = new Descriptor('service-accounts', 'client', 'mock', 'default', '1.0');
 	public static DirectClientV1Descriptor = new Descriptor('service-accounts', 'client', 'direct', 'default', '1.0');
-	public static CommandableHttpClientV1Descriptor = new Descriptor('service-accounts', 'client', 'http', 'default', '1.0');
+	public static CommandableHttpClientV1Descriptor = new Descriptor('service-accounts', 'client', 'commandable-http', 'default', '1.0');
 	public static CommandableGrpcClientV1Descriptor = new Descriptor('service-accounts', 'client', 'commandable-grpc', 'default', '1.0');
 	
 	constructor() {

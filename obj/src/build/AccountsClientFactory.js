@@ -23,6 +23,6 @@ AccountsClientFactory.Descriptor = new pip_services3_commons_nodex_1.Descriptor(
 AccountsClientFactory.NullClientV1Descriptor = new pip_services3_commons_nodex_1.Descriptor('service-accounts', 'client', 'null', 'default', '1.0');
 AccountsClientFactory.MockClientV1Descriptor = new pip_services3_commons_nodex_1.Descriptor('service-accounts', 'client', 'mock', 'default', '1.0');
 AccountsClientFactory.DirectClientV1Descriptor = new pip_services3_commons_nodex_1.Descriptor('service-accounts', 'client', 'direct', 'default', '1.0');
-AccountsClientFactory.CommandableHttpClientV1Descriptor = new pip_services3_commons_nodex_1.Descriptor('service-accounts', 'client', 'http', 'default', '1.0');
+AccountsClientFactory.CommandableHttpClientV1Descriptor = new pip_services3_commons_nodex_1.Descriptor('service-accounts', 'client', 'commandable-http', 'default', '1.0');
 AccountsClientFactory.CommandableGrpcClientV1Descriptor = new pip_services3_commons_nodex_1.Descriptor('service-accounts', 'client', 'commandable-grpc', 'default', '1.0');
 //# sourceMappingURL=AccountsClientFactory.js.map

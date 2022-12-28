@@ -1,6 +1,6 @@
 {
     "name": "client-accounts-node",
-    "version": "1.1.1",
+    "version": "1.1.2",
     "author": "Conceptual Vision Consulting LLC",
     "description": "Node.js / ES2017 client sdk for service-accounts microservice",
     "contributors": [
